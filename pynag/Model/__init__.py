@@ -188,7 +188,7 @@ class ObjectRelations(object):
     # servicegroup_members['servicegroup_name'] = ['service1_shortname','service2_shortname']
     servicegroup_members = defaultdict(set)
 
-	
+    
 
     @staticmethod
     def reset():
@@ -2272,32 +2272,33 @@ class Contactgroup(ObjectDefinition):
             i.save()
 
 class Poller(ObjectDefinition):
-	object_type = 'poller'
+    object_type = 'poller'
     objects = ObjectFetcher('poller')
-	
+    
 class Realm(ObjectDefinition):
-	object_type = 'realm'
+    object_type = 'realm'
     objects = ObjectFetcher('realm')
-	
+    
 class Arbiter(ObjectDefinition):
-	object_type = 'arbiter'
+    object_type = 'arbiter'
     objects = ObjectFetcher('arbiter')
 
 class Broker(ObjectDefinition):
-	object_type = 'broker'
+    object_type = 'broker'
     objects = ObjectFetcher('broker')
 
 class Reactionner(ObjectDefinition):
-	object_type = 'reactionner'
+    object_type = 'reactionner'
     objects = ObjectFetcher('reactionner')
 
 class Scheduler(ObjectDefinition):
-	object_type = 'scheduler'
+    object_type = 'scheduler'
     objects = ObjectFetcher('scheduler')
 
 class Receiver(ObjectDefinition):
-	object_type = 'receiver'
-    objects = ObjectFetcher('receiver')	
+    object_type = 'receiver'
+    objects = ObjectFetcher('receiver') 
+    
 class Hostgroup(ObjectDefinition):
     object_type = 'hostgroup'
     objects = ObjectFetcher('hostgroup')
