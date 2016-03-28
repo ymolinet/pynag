@@ -197,6 +197,72 @@ object_definitions["serviceextinfo"]["notes_url"] = {"name": "notes_url", "requi
 object_definitions["serviceextinfo"]["action_url"] = {"name": "action_url", "required": "optional", "value": "url"}
 object_definitions["serviceextinfo"]["icon_image"] = {"name": "icon_image", "required": "optional", "value": "image_file"}
 object_definitions["serviceextinfo"]["icon_image_alt"] = {"name": "icon_image_alt", "required": "optional", "value": "alt_string"}
+
+# These are gathered from Shinken Object Definition documentation (Version 2.4.0) - http://shinken.readthedocs.org/en/latest/03_configuration/objectdefinitions.html
+object_definitions["realm"] = {}
+object_definitions["realm"]["realm_name"] = { "name": "real_name", "required": "required", "value": "real_name"}
+object_definitions["realm"]["realm_members"] = { "name": "realm_members", "required": "optional", "value": "realm_members"}
+object_definitions["realm"]["default"] = { "name": "default", "required": "optional", "value": "#"}
+
+object_definitions["arbiter"] = {}
+object_definitions["arbiter"]["arbiter_name"] = { "name": "arbiter_name", "required": "required", "value": "arbiter_name"}
+object_definitions["arbiter"]["address"] = {"name": "address", "required": "required", "value": "address"}
+object_definitions["arbiter"]["host_name"] = {"name": "host_name", "required": "required", "value": "host_name"}
+object_definitions["arbiter"]["port"] = { "name": "port", "required": "required", "value": "#"}
+object_definitions["arbiter"]["spare"] = { "name": "spare", "required": "required", "value": "[0/1]"}
+object_definitions["arbiter"]["modules"] = { "name": "modules", "required": "required", "value": "modules"}
+object_definitions["arbiter"]["timeout"] = { "name": "timeout", "required": "optional", "value": "#"}
+object_definitions["arbiter"]["data-timeout"] = { "name": "data-timeout", "required": "optional", "value": "#"}
+object_definitions["arbiter"]["max_check_attempts"] = { "name": "max_check_attempts-timeout", "required": "optional", "value": "#"}
+object_definitions["arbiter"]["check_interval"] = { "name": "check_interval-timeout", "required": "optional", "value": "#"}
+object_definitions["arbiter"]["accept_passive_unknown_check_results"] = { "name": "accept_passive_unknown_check_results", "required": "optional", "value": "[0/1]"}
+
+object_definitions["poller"] = {}
+object_definitions["poller"]["poller_name"] = { "name": "poller_name", "required": "required", "value": "poller_name"}
+object_definitions["poller"]["address"] = {"name": "address", "required": "required", "value": "address"}
+object_definitions["poller"]["host_name"] = {"name": "host_name", "required": "required", "value": "host_name"}
+object_definitions["poller"]["port"] = { "name": "port", "required": "required", "value": "#"}
+object_definitions["poller"]["spare"] = { "name": "spare", "required": "required", "value": "[0/1]"}
+object_definitions["poller"]["realm"] = {"name": "realm", "required": "optional", "value": "realm"}
+object_definitions["poller"]["manage_sub_realms"] = {"name": "manage_sub_realms", "required": "optional", "value": "[0/1]"}
+object_definitions["poller"]["poller_tags"] = {"name": "poller_tags", "required": "optional", "value": "realm"}
+object_definitions["poller"]["modules"] = { "name": "modules", "required": "required", "value": "modules"}
+
+object_definitions["scheduler"] = {}
+object_definitions["scheduler"]["scheduler_name"] = { "name": "scheduler_name", "required": "required", "value": "scheduler_name"}
+object_definitions["scheduler"]["address"] = {"name": "address", "required": "required", "value": "address"}
+object_definitions["scheduler"]["host_name"] = {"name": "host_name", "required": "required", "value": "host_name"}
+object_definitions["scheduler"]["port"] = { "name": "port", "required": "required", "value": "#"}
+object_definitions["scheduler"]["spare"] = { "name": "spare", "required": "required", "value": "[0/1]"}
+object_definitions["scheduler"]["realm"] = {"name": "realm", "required": "optional", "value": "realm"}
+object_definitions["scheduler"]["modules"] = { "name": "modules", "required": "required", "value": "modules"}
+object_definitions["scheduler"]["accept_passive_unknown_check_results"] = { "name": "accept_passive_unknown_check_results", "required": "optional", "value": "[0/1]"}
+
+object_definitions["reactionner"] = {}
+object_definitions["reactionner"]["reactionner_name"] = { "name": "reactionner_name", "required": "required", "value": "reactionner_name"}
+object_definitions["reactionner"]["address"] = {"name": "address", "required": "required", "value": "address"}
+object_definitions["reactionner"]["host_name"] = {"name": "host_name", "required": "required", "value": "host_name"}
+object_definitions["reactionner"]["port"] = { "name": "port", "required": "required", "value": "#"}
+object_definitions["reactionner"]["spare"] = { "name": "spare", "required": "required", "value": "[0/1]"}
+object_definitions["reactionner"]["manage_sub_realms"] = {"name": "manage_sub_realms", "required": "optional", "value": "[0/1]"}
+object_definitions["reactionner"]["modules"] = { "name": "modules", "required": "required", "value": "modules"}
+
+object_definitions["broker"] = {}
+object_definitions["broker"]["broker_name"] = { "name": "broker_name", "required": "required", "value": "broker_name"}
+object_definitions["broker"]["address"] = {"name": "address", "required": "required", "value": "address"}
+object_definitions["broker"]["host_name"] = {"name": "host_name", "required": "required", "value": "host_name"}
+object_definitions["broker"]["port"] = { "name": "port", "required": "required", "value": "#"}
+object_definitions["broker"]["spare"] = { "name": "spare", "required": "required", "value": "[0/1]"}
+object_definitions["broker"]["manage_sub_realms"] = {"name": "manage_sub_realms", "required": "optional", "value": "[0/1]"}
+object_definitions["broker"]["modules"] = { "name": "modules", "required": "required", "value": "modules"}
+
+object_definitions["receiver"] = {}
+object_definitions["receiver"]["receiver_name"] = { "name": "receiver_name", "required": "required", "value": "receiver_name"}
+object_definitions["receiver"]["address"] = {"name": "address", "required": "required", "value": "address"}
+object_definitions["receiver"]["host_name"] = {"name": "host_name", "required": "required", "value": "host_name"}
+object_definitions["receiver"]["port"] = { "name": "port", "required": "required", "value": "#"}
+object_definitions["receiver"]["spare"] = { "name": "spare", "required": "required", "value": "[0/1]"}
+
 # Generated via examples/Model/parse-configmain.py
 main_config = {'accept_passive_host_checks': {'doc': 'This option determines whether or not Nagios will accept <a href="passivechecks.html">passive host checks</a> when it initially (re)starts.  If this option is disabled, Nagios will not accept any passive host checks.  Note: If you have <a href="#retain_state_information">state retention</a> enabled, Nagios will ignore this setting when it (re)starts and use the last known setting for this option (as stored in the <a href="#state_retention_file">state retention file</a>), <i>unless</i> you disable the <a href="#use_retained_program_state">use_retained_program_state</a> option.  If you want to change this option when state retention is active (and the <a href="#use_retained_program_state">use_retained_program_state</a> is enabled), you\'ll have to use the appropriate <a href="extcommands.html">external command</a> or change it via the web interface.  Values are as follows: ',
                                               'examples': ['accept_passive_host_checks=1'],
