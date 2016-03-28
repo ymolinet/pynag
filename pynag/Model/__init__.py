@@ -188,6 +188,8 @@ class ObjectRelations(object):
     # servicegroup_members['servicegroup_name'] = ['service1_shortname','service2_shortname']
     servicegroup_members = defaultdict(set)
 
+	
+
     @staticmethod
     def reset():
         """ Runs clear() on every member attribute in ObjectRelations """
@@ -2636,6 +2638,14 @@ string_to_class['servicedependency'] = ServiceDependency
 string_to_class['hostescalation'] = HostEscalation
 string_to_class['serviceescalation'] = ServiceEscalation
 string_to_class['command'] = Command
+string_to_class['poller'] = Poller
+string_to_class['arbiter'] = Arbiter
+string_to_class['scheduler'] = Scheduler
+string_to_class['realm'] = Realm
+string_to_class['broker'] = Broker
+string_to_class['receiver'] = Receiver
+string_to_class['reactionner'] = Reactionner
+
 #string_to_class[None] = ObjectDefinition
 
 # Attributelist is put here for backwards compatibility
